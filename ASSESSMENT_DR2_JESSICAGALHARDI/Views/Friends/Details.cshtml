@@ -1,0 +1,48 @@
+﻿@model FriendXY.Models.Friend
+@{
+}
+
+<br />
+<br />
+
+
+<div>
+    <font size="+2" >
+        <p align="center" style="font-family:'Lucida Bright'"> Contact Details: </p>
+    </font>
+
+</div>
+
+<br />
+
+<table class="table" style="font-family:'Lucida Bright'">
+    <thead>
+        <tr>
+
+            <td align="center">Contact Id</td>
+            <td align="center">Name</td>
+            <td align="center">Last Name</td>
+            <td align="center">Birth Date</td>
+            
+
+        </tr>
+        <tr>
+            <td align="center"> @Model.Id </td>
+            <td align="center"> @Model.Name </td>
+            <td align="center"> @Model.LastName </td>
+            <td align="center"> @Model.Birthday </td>
+        </tr>
+
+
+
+    </thead>
+    <tbody>
+</table>
+
+<br />
+<br />
+
+<center>
+    <input class="btn btn-primary"  style="font-family:'Lucida Bright'" type="button" value="Return" onclick="window.location.href ='@Url.Action("List","Friends")'" />
+</center>
+

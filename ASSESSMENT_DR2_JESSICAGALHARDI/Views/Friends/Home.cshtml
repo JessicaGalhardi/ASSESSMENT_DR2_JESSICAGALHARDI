@@ -1,0 +1,118 @@
+﻿@model IEnumerable<FriendXY.Models.Friend>
+@{
+
+}
+
+
+<br />
+<br />
+
+
+<html>
+
+
+<div>
+
+    <p style="font-family:'Lucida Bright'" class="fs-2" align="center"> Friends List: </p>
+
+
+</div>
+
+</html>
+<br />
+
+<table class="table table-hover" style="font-family:'Lucida Bright'">
+
+    <thead>
+
+        <tr>
+
+
+
+            <td  class="fs-5" align="center">Full Name</td>
+
+            <td class="fs-5" align="center">Birthday</td>
+        </tr>
+
+
+    </thead>
+
+
+
+    <tbody>
+
+
+
+
+        @{
+            foreach (var friendX in Model)
+            {
+
+                <tr>
+
+
+
+                    <td align="center">
+
+                        @Html.DisplayFor(modelItem => friendX.Name)
+                        @Html.DisplayFor(modelItem => friendX.LastName)
+
+                    </td>
+                    <td align="center">
+
+                        @Html.DisplayFor(modelItem => friendX.Birthday)
+
+                    </td>
+
+                </tr>
+
+
+            }
+        }
+    </tbody>
+
+</table>
+<br />
+
+<center>
+
+    <div align="center" class="card text-white bg-info mb-3" style="max-width: 20rem;">
+        <div class="card-header">
+
+            <span class="fs-2" style="color:#6416B8"> T</span>
+            <span class="fs-2" style="color:#C71585 ">O</span>
+            <span class="fs-2" style="color:#17058D">D</span>
+            <span class="fs-2" style="color:#056376">A</span>
+            <span class="fs-2" style="color:#26231f">Y</span>
+            <span class="fs-2" style="color:#035F13 ">'</span>
+            <span class="fs-2" style="color:#4169E1">S</span>
+
+            <span> &nbsp;  </span>
+            <br />
+
+            <span class="fs-2" style="color:#4B0082">B</span>
+            <span class="fs-2" style="color:#A0522D">I</span>
+            <span class="fs-2" style="color:#CD5C5C">R</span>
+            <span class="fs-2" style="color:#9400D3">T</span>
+            <span class="fs-2" style="color:#006400">H</span>
+            <span class="fs-2" style="color:#191970">D</span>
+            <span class="fs-2" style="color:#8B008B">A</span>
+            <span class="fs-2" style="color:#FF0066">Y</span>
+            <span class="fs-2" style="color:#4682B4">S</span>
+           
+        </div>
+        <div class="card-body">
+            <h4 class="card-title"> See who has a birthday today... </h4>
+             <p class="card-text"> @Html.ActionLink("TODAY'S BIRTHDAY FRIENDS", "Index","Friends")</p>
+        </div>
+    </div>
+</center>
+
+
+
+
+
+
+
+
+

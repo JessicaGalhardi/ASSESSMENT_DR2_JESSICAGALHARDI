@@ -1,0 +1,45 @@
+﻿@model FriendXY.Models.Friend
+
+<br />
+
+<div>
+    <font size="+2" >
+        <p align="center" style="font-family:'Lucida Bright'"> Contact To Update: </p>
+    </font>
+
+</div>
+
+<br />
+
+
+<form align="center" method="post" action="/Friends/Update/@Model.Id" style="font-family:'Lucida Bright'">
+
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+
+        <div class="form-group">
+            <label class="col-form-label mt-4" for="inputDefault">Name:</label>
+            <input type="text" name="Name" id="Name" value="@Model.Name" class="form-control" placeholder="Name" >
+        </div>
+
+        <div class="form-group">
+            <label class="col-form-label mt-4" for="inputDefault">Last Name:</label>
+            <input type="text" name="LastName" id="LastName" value="@Model.LastName" class="form-control" placeholder="Last Name">
+        </div>
+
+        <div class="form-group">
+            <label class="col-form-label mt-4" for="inputDefault">Birth Date (dd/mm) :</label>
+            <input type="text" name="BirthDate" id="Name" value="@Model.BirthDate" class="form-control" placeholder="Birth day">
+        </div>
+       
+    </div>
+
+    <br />
+    <br />
+
+    <input class="btn btn-primary" type="submit" value="Send" />
+    <input class="btn btn-primary" type="button" value="Return" onclick="window.location.href ='@Url.Action("List","Friends")'" />
+
+</form>
+

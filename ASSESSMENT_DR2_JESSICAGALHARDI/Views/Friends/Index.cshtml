@@ -1,0 +1,91 @@
+﻿@model IEnumerable<FriendXY.Models.Friend>
+
+@{
+}
+
+<br />
+<br />
+
+
+<html>
+
+<body style="font-family:'Lucida Bright'">
+    <center>
+
+
+        <span class="fs-1" style="color:#6416B8"> T</span>
+        <span class="fs-1" style="color:#EA2FD9 ">O</span>
+        <span class="fs-1" style="color:#17058D">D</span>
+        <span class="fs-1" style="color:#056376">A</span>
+        <span class="fs-1" style="color:#08EDF8 ">Y</span>
+        <span class="fs-1" style="color:#035F13 ">'</span>
+        <span class="fs-1" style="color:#66CC66">S</span>
+
+        <span> &nbsp;  </span>
+
+        <span class="fs-1" style="color:#4B0082">B</span>
+        <span class="fs-1" style="color:#FFCCCC">I</span>
+        <span class="fs-1" style="color:#FF0066">R</span>
+        <span class="fs-1" style="color:#9400D3">T</span>
+        <span class="fs-1" style="color:#66CC66">H</span>
+        <span class="fs-1" style="color:#191970">D</span>
+        <span class="fs-1" style="color:#FFCCCC">A</span>
+        <span class="fs-1" style="color:#FF0066">Y</span>
+        <span class="fs-1" style="color:#66CC66">S</span>
+        <span class="fs-1" style="color:#6416B8"> :</span>
+
+
+        <p style="font-family:'Lucida Bright'"> Be a good friend and say Happy Birthday!</p>
+
+
+    </center>
+</body>
+
+</html>
+<br />
+
+
+
+
+<table class=" table table-hover" style="font-family:'Lucida Bright'">
+
+
+
+    <tbody>
+
+        @{
+            foreach (var friendX in Model)
+            {
+
+                <tr>
+
+                    <td class="fs-6" align="center">
+                        @Html.DisplayFor(modelItem => friendX.Name)
+                        @Html.DisplayFor(modelItem => friendX.LastName)
+                    </td>
+
+                </tr>
+
+            }
+
+        
+        }
+    </tbody>
+
+</table>
+
+<br />
+
+<center>
+
+    <input class="btn btn-primary" style="font-family:'Lucida Bright'" type="button" value="Return" onclick="window.location.href ='@Url.Action("Home","Friends")'" />
+
+</center>
+
+
+
+
+
+
+
+

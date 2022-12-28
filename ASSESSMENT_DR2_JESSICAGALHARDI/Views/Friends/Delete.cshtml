@@ -1,0 +1,45 @@
+﻿@model FriendXY.Models.Friend
+
+@{
+}
+
+<br />
+<br />
+
+<div>
+    <font size="+2" style="color:#00CED1">
+        <p align="center" style="font-family:'Lucida Bright'"> Remove a friend from your list: </p>
+    </font>
+
+</div>
+
+<br />
+<br />
+
+<table class="table" style="font-family:'Lucida Bright'">
+    <thead>
+        <tr>
+            <td align="center" style="background-color:lightgray">Contact Id</td>
+            <td align="center" style="background-color:lightblue">Name</td>
+            <td align="center" style="background-color:lightgray">Last Name</td>
+            <td align="center" style="background-color:lightblue">Birth Date</td>
+
+
+        </tr>
+        <tr>
+            <td align="center"> @Model.Id </td>
+            <td align="center"> @Model.Name </td>
+            <td align="center"> @Model.LastName </td>
+            <td align="center"> @Model.BirthDate </td>
+        </tr>
+
+
+
+    </thead>
+    <tbody>
+</table>
+
+<center>
+    <input style="font-family:'Lucida Bright'"  type="button" value="Return" onclick="window.location.href ='@Url.Action("List","Friends")'" />
+</center>
+

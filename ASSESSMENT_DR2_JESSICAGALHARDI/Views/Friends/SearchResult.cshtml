@@ -1,0 +1,69 @@
+﻿@model IEnumerable<FriendXY.Models.Friend>
+@{
+}
+
+<br />
+
+<div>
+    <font size="+2" >
+        <p align="center" style="font-family:'Lucida Bright'"> Search results: </p>
+    </font>
+
+</div>
+
+<br />
+<br />
+
+
+<table class="table" style="font-family:'Lucida Bright'">
+    <thead>
+        <tr>
+            <td align="center" >Contact Id</td>
+            <td align="center" >Name</td>
+            <td align="center" >Last Name</td>
+            <td align="center" >Birth Date</td>
+           
+           
+
+        </tr>
+    </thead>
+    <tbody>
+
+        @{
+            foreach (var friendX in Model)
+            {
+
+                <tr>
+
+
+                    <td align="center">
+                        @Html.DisplayFor(modelItem => friendX.Id)
+                    </td>
+                    <td align="center">
+                        @Html.DisplayFor(modelItem => friendX.Name)
+                    </td>
+                    <td align="center">
+                        @Html.DisplayFor(modelItem => friendX.LastName)
+                    </td>
+                    <td align="center">
+                        @Html.DisplayFor(modelItem => friendX.Birthday)
+                    </td>
+
+                </tr>
+
+
+            }
+        }
+    </tbody>
+
+
+
+</table>
+
+<br />
+
+<center>
+
+    <input class="btn btn-primary"  style="font-family:'Lucida Bright'" type="button" value="Return" onclick="window.location.href ='@Url.Action("List","Friends")'" />
+
+</center>
